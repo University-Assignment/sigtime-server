@@ -1,4 +1,3 @@
-const { Schema } = require("mongoose");
 const { createSchema } = require("../../helpers");
 
 const schema = createSchema(
