@@ -3,4 +3,7 @@ const controller = require("./controller");
 
 const router = Router();
 
+router.get("/", controller.getResult);
+router.post("/", controller.analysis);
+
 module.exports = router;
