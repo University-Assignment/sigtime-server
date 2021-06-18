@@ -13,8 +13,4 @@ const schema = createSchema(
   }
 );
 
-schema.statics.findById = function (id) {
-  return this.findOne({ _id: id });
-};
-
 module.exports = schema;

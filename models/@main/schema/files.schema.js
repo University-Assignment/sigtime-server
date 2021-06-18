@@ -9,7 +9,6 @@ const schema = createSchema(
     },
     filename: String,
     extension: String,
-    size: Number,
   },
   {
     createdAt: "uploadedAt",
@@ -18,9 +17,5 @@ const schema = createSchema(
 );
 
 schema.index({ uploadedAt: 1 });
-
-schema.statics.findById = function (id) {
-  return this.findOne({ id });
-};
 
 module.exports = schema;
