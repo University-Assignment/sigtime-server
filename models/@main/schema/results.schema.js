@@ -6,6 +6,7 @@ const schema = createSchema(
     email: String,
     files: [{ type: Schema.Types.ObjectId, ref: "File" }],
     complete: Boolean,
+    signature: Number,
   },
   {
     createdAt: "uploadedAt",
