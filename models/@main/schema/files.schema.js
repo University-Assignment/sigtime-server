@@ -7,6 +7,7 @@ const schema = createSchema(
       unique: true,
       sparse: true,
     },
+    originalname: String,
     filename: String,
     extension: String,
   },

@@ -4,11 +4,12 @@ const { createResponse } = require("../../../utils/response");
 const { Files } = require("../../../models/@main");
 
 const upload = asyncHandler(async (req, res, next) => {
-  const { path, originalName, filename } = req.file;
+  const { path, originalname, filename } = req.file;
 
   const file = await Files.create({
     url: path,
-    filename: originalName,
+    originalname: originalname.substring(0, originalname.lastIndexOf(".")),
+    filename: filename.substring(0, filename.lastIndexOf(".")),
     extension: extname(filename),
   });
   if (!file) return next();
